@@ -1,0 +1,3 @@
+The cloud computing facilates by provding capabilties to replace expensive hardware and software 
+resources to a virtual service. The users can have access to could according to their needs and also  
+optimize the use of resources.
