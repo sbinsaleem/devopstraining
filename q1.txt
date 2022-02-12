@@ -1,0 +1,8 @@
+The agile and devops are two software development methodolgies. 
+The both development methodolgies are baed on the fast paced software development. 
+However, the monitoring of production is an important element of the devops. 
+The deveops helps in continous integration and delivrey by automating the development and 
+production processes. In other words, the process of planning to monitoring runs in circles 
+in the devops. In other words, the devops helps in getting fast feedback from the customers, 
+increase the frequency of releases and bug fixes and develosp a sense of responsibility and 
+ownership in the both development and operations teams.
