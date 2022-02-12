@@ -1,0 +1,5 @@
+In continous integration, we merge code changes from differnet developers into a central respository.
+The automated build and tests are run.There are fewer conflicts of developers to resolve. 
+In continous integration, some tests are run manully if you do not have a complete test automation in your
+company.On the other hand, in continous delivery, the code changes are automatically built and tested.
+In the continous deployment, the release featuers to get feedback from the users. 
