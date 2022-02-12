@@ -1,0 +1,9 @@
+The git is a distributed version control system to maintain all versions of code / documents of 
+differnt developers in a repository.
+Normally, the git has two respository. One is on the local machine of the developer where he copies the 
+original or main branch of the code. The developer do changes to this branch and when is satifised that the 
+code is complete and error free then it commits to the remote repository. In this way, the differnet developers
+work on the local copies of the code in parallel and then they commit the code to the remote respository.
+Practially, the developers install git version control on their local machines and they have accounts on the 
+github (the remote repository). The github is used to push the finished code from the local repositories.
+   
