@@ -1,0 +1,12 @@
+There are three major sections of the git.The first section is called
+"Working Directory". The second section is called "Staging area".The third section
+is called "local repository". It is also called the ".git directory".
+This lead to three following stages of git.
+
+1) The modified stage which means that you have changed 
+the file but have not committed it to your local respository.
+2) The staged stage means that you 
+marked your file ready to commit but still have not commityed it
+to the local respository 
+3)The committed stage means that you commit the stages to your
+local repository.
