@@ -1,0 +1,13 @@
+The following three methods of git are used for reset.
+
+1) The first method is called "mixed" reset which is a default method.
+In this method, we remove commit from the local repository and 
+changes from the staging area.
+
+2) The second method is called "soft" reset. In this method the commit
+is removed from the local repository but files remain in the staging
+area.
+
+3) The third method is called "hard" reset. In this method the changes
+are removed from the local repository, staging area and the local files.
+
