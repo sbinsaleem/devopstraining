@@ -1,0 +1,20 @@
+At the hardware level, the docker container is a self isolating process which shares the kernel of the host operating system and
+can have self operating system as well. However, a virtual machine is a platform that virtualizes the complete hardware and 
+software infrastrcture to replace a complete actual / physical computer system. The container is a term used for refering to a 
+package that contains all the code and dependencies to run an application and does not need more resources interms of storage.
+Another difference is that using container makes deployment easy because the same image and dependencies tested by the developers
+can be integrated in production with the installation of additional libaries.
+A same container running on the developers' machine can run in the production environment which means there is no issue of 
+"deos not works on my machine" issue.
+On the other hand, the virutal machines are considered more secure compared to the containers because they do not share the kernel,
+memory and other resources with the other virtual machines. However, a container shares all the resoruces with other container which
+makes it more vulnerable compared to a virtual machine.
+We can safely say that a container is an example of apartment building where some infrastructure is shared with other apartments and 
+everyone has their own customize container like an apartment. On the other hand, a virtual machine is an example of a house building 
+with its own complete infrastructure.
+
+In summary, we can say that in the physical servers architecture, we have a single operating system on top of the operating system layer
+and then all seperate applications run on the operating system. In a hypervisor architecture, we have a hypervisor installed on the 
+hardware layer that contains various operating system. All operating system have their own processes running on them. In the third 
+type of architecture namely container based architecture, we have hypervisor program running on the hardware layer. On the hypervisor,
+we have a single operating system installed and all the containers run as application interfaces on that single operating system.    
