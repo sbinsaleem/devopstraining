@@ -1,0 +1,5 @@
+Command to run : Sudo docker container run -d --publish 8080:80 --name assignment-2 nginx
+Container ID : d5cd6dea3c20187b0b65a15159a8469670dab670ac798739953bb2f61e03f41b
+Evidence of container creation with assignment-2 name : docker: "Error response from daemon: Conflict. 
+The container name "/assignment-2" is already in use by container".
+ 
