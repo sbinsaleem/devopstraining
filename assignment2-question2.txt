@@ -1,0 +1,7 @@
+In the docker architecture, we have three components namely "docker client", "docker daemon" and "docker registry".
+These three components have seperate roles in the docker. The docker client is responsible to run the containers 
+from the docker daemon. The docker client is an example of a simple CRI (Container Runtime Interface) that interacts 
+with the docker daemon. The docker daemon runs on the operating system responsible to create, run and monitor containers 
+and to build and pull images. The third componet of the docker architecture is docker registry that is a central respository 
+to hold all the docker images from where users can pull and use the existing images. The registry can be public and private 
+according to the needs of the organization.   
