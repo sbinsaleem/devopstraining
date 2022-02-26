@@ -1,0 +1,9 @@
+Question 6 : "Exit the above container, and now recreate the container by Volume using bind mounting."
+
+Command toe create a volume named assignmnet-2 : sudo docker volume create assignmnet-2
+
+The following is the output of the above command.
+
+assignmnet-2
+
+
