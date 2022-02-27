@@ -1,5 +1,27 @@
-Command to run : Sudo docker container run -d --publish 8080:80 --name assignment-2 nginx
-Container ID : d5cd6dea3c20187b0b65a15159a8469670dab670ac798739953bb2f61e03f41b
-Evidence of container creation with assignment-2 name : docker: "Error response from daemon: Conflict. 
-The container name "/assignment-2" is already in use by container".
+Command to create a container named assignment-2: sudo docker run -d --publish 9090:80 --name assignment-2 nginx
+Container ID : 76c2afcca1dd71808bdb0f631a2ca0372a4fc85c2bb943cc8531356a541bf992
+The following is the evidnece of generation of the conatiner assignment 2.
+
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                                   NAMES
+76c2afcca1dd   nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp   assignment-2
+
+Command to create a network named assignment 2 :  sudo docker network create assignment-2
+
+The following is the evidence of network creation with the name assignment-2.
+
+NETWORK ID     NAME           DRIVER    SCOPE
+3259cf47593b   assignment-2   bridge    local
+
+Command to connect network assignment-2 with the container assignment-2 : sudo docker network connect assignment-2 assignment-2
+
+Command to run container assignment-2 in a detached mode running on port host 9090 on on a custom network name assignment-2
+
+sudo docker run -d --publish 9090:80 --network assignment-2 --name assignment-2 nginx
+
+The following is the evidene of container assignment-2 running on a custom network- assignment-2
+49155e50772fbb178098de97009c6edac2760ba52926fb14405cd81a55525c4c
+
+
+
+ 
  
