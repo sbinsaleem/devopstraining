@@ -6,13 +6,9 @@ The following is the output of the above command.
 
 assignmnet-2
 
-Command to mount the assignment-2 path : Sudo docker run -dit --name assignment-2 -v /devopstraing/dockerdata:/usr/local/apache2/htdocs/ 
-httpd:2.4
+Command to mount the assignment-2 path : sudo docker run -dit --name assignment-2 -v /host/path/website/:/usr/local/apache2/htdocs/ httpd:2.4
 
 The following is the output of the above command.
 
-Unable to find image 'httpd:2.4' locally
-2.4: Pulling from library/httpd
-Digest: sha256:5cc947a200524a822883dc6ce6456d852d7c5629ab177dfbf7e38c1b4a647705
-Status: Downloaded newer image for httpd:2.4
-ad4701f3c34346b7302d164d730cd6a2aaac499804664f8d56e9498d03756528
+2a6264bc64a8d78a121ea351458cb2d75ab12e0177fd7480639a0f63d725e8bd
+

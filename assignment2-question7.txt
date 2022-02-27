@@ -1,0 +1,21 @@
+Question 7 : Command to exec into the above container and replace the default index.html to a custom
+one, which says that â€œI am becoming a Docker Expertâ€ and it should be persisted for
+the next times.
+
+The following operation is done. 
+
+
+sudo docker run -dit --name assignment-2 -v /host/path/website/:/usr/local/apache2/htdocs/ httpd:2.4
+2a6264bc64a8d78a121ea351458cb2d75ab12e0177fd7480639a0f63d725e8bd
+devopstraining@devopstraining:~$ nano /host/path/website/index.html
+devopstraining@devopstraining:~$ sudo nano /host/path/website/index.html
+devopstraining@devopstraining:~$ docker container stop assignment-2
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/assignment-2/stop: dial unix /var/run/docker.sock: connect: permission denied
+devopstraining@devopstraining:~$ sudo docker container stop assignment-2
+assignment-2
+devopstraining@devopstraining:~$ sudo docker container rm assignment-2
+assignment-2
+devopstraining@devopstraining:~$ cd /host/path/website
+devopstraining@devopstraining:/host/path/website$ ls
+index.html
+devopstraining@devopstraining:/host/path/website$
