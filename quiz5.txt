@@ -1,0 +1,11 @@
+QUIZ Week 5
+What is CI vs CD
+Container vs VM
+How to leverage build cache
+CMD vs ENTRYPOINT
+How to pass an environment variable to Container
+What are restart policies & How many
+Benefits of Docker compose
+Syntax of Docker Compose File
+Can we build Docker Images at runtime using Docker Compose
+Benefits of Docker Swarm
