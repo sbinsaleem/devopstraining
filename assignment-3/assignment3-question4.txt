@@ -1,0 +1,17 @@
+Question 4 : "Explain containers vs Image?"
+
+Answer 4: The container is a run time instance of an image. The image is a package or a recipie in simple terms to package all the
+related componets of an application at one place. Later, the  application can  be used by as many people as possible in their own
+directories or working environments. In other words, an image is a packaged form of an application. On the other hand, a container is
+a running form of an image.
+Normally, the images are stored and shared by all the users on a central registry like the docker hub. A new user can pull / download any
+image to use it for his/her purpose or needs. Each image has a base image by using which the image is created. On the other hand, multiple
+multiple containers can be based and run using a same image. In such a situation, each container will run in an isolation.
+
+Moreover, we can say that an image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools,
+and other files needed for an application to run. The images are read-only. Therefore, the images are sometimes referred to as snapshots.
+
+The images can be refered to as templates which can be started and run. Normally, we use image as a base to build a container.
+A container is just a running image. Once you create a container, it adds a writable layer on top of the immutable image which means y
+ou can now modify it. A container is a virtualized run-time environment where users can isolate applications from the underlying system.
+These containers are compact, portable units in which you can start up an application quickly and easily.

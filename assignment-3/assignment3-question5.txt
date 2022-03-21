@@ -1,0 +1,10 @@
+Question 5 : "Explain RUN vs CMD vs Entrypoint?"
+
+Answer 5: The "run" command is a build time command which is used in the image build step. The "CMD" and "Entrypoint" are
+run time command. The purpose of entrypoint is to specify which first command should run when a container we run a container.
+The entrypoint can be changed at the runtime. We can the "Entrypoint" when we starts the conainter. On the other hand, the CMD
+specifies which default command should run at the start of the container.
+
+I have used both Entrypoint and Cmd in a Dockerfile where I gave the value of "echo" to entrypoint and "Hello" to the cmd. After I
+run the Dockerfile, it prints hello on the screen in a ubuntu conainter.
+
