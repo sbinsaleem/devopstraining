@@ -1,0 +1,26 @@
+Question 6 : "Improve the Dockerfile for python Application given in slides using the Dockerfile &
+then improve it and share image size & estimated build time for it"
+
+Answer 6: 
+
+Before the execution of anything, the following is the status of my folder.
+
+*****
+devopstraining@devopstraining:~/gitworkspace/docker-samples/bad-practices-images/cached-layers$ ls
+app.py  Dockerfile  index.html
+devopstraining@devopstraining:~/gitworkspace/docker-samples/bad-practices-images/cached-layers$ nano Dockerfile
+devopstraining@devopstraining:~/gitworkspace/docker-samples/bad-practices-images/cached-layers$ 
+*****
+
+Now, I am running the bad-practice dockerfile to show it's build time. The name of bad practice dockerfile is "Dockerfile".
+
+******
+Fetched 76.7 MB in 4min 30s (284 kB/s)
+Selecting previously unselected package liblocale-gettext-perl.
+(Reading database ... 4127 files and directories currently installed.)
+Preparing to unpack .../liblocale-gettext-perl_1.07-4_amd64.deb ...
+******
+
+The problem with the answer of this question is the installation of builx. In my OS and docker, I could not install the Builx, though I 
+tried many-times. Therefore, I could not see the image build time and could not completely answer this question. Given, I have limited
+time, I have decided to attempt this question at some later stage.

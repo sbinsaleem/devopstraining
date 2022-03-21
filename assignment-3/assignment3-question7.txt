@@ -1,0 +1,19 @@
+Question 7 : "Run mysql container using the official image, by persisting data and passing
+environment variables to set username & passwordâ€¦ You can see the information of how to
+persist and information here."
+
+Answer 7 : 
+
+For running my sql conmtainer, first the official image is pulled using the following command.
+
+Command to pull the official image : sudo docker pull mysql
+
+Command to run mysql container setting the environment variable and values of user-name and password : 
+
+sudo docker run --name mysql-test -v /home/devopstraining/dockerdata/mysql-test:/etc/mysql/conf.d 
+-e MySQL_ROOT_USER=saad -e MYSQL_ROOT_PASSWORD=secret -d mysql
+
+The following is the output of the above command. 
+
+78d1fdb9215a562bbfde61adbcc5964ab82259a4c45e33dae844956408bceb0b
+

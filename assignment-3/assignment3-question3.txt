@@ -1,0 +1,18 @@
+Question 3 : "What are multi-stage builds?"
+
+Answer 3: 
+
+In a multi-stage build, we can have multiple stages to build an image in a Dockerfile. In the first stage, we normally build the artefact, 
+application or executable and in the second stage we use that executable or created artefact to made the final image.
+
+In the multstage build, the final image will be made from the last "FROM" command used in a Dockerfile. 
+
+keeping the docker image size down is one of the challenge for building images, The each instruction in the Dockerfile adds a layer 
+to the image, and you need to remember to clean up any artifacts you don’t need before moving on to the next layer. A common practice 
+is to have one Dockerfile to use for development (which contained everything needed to build your application), and a smaller Dockerfile  
+for production. The smaller file only contain your application and exactly what is needed to run it.
+
+The multi stage building solves this problem which means we  use multiple "FROM" statements in a Dockerfile, the each "FROM" 
+instruction can use a different base. The each "FORM" statement begins a new stage of the build. You can selectively copy artifacts 
+from one stage to another which means leaving behind everything you don’t want in the final image.
+

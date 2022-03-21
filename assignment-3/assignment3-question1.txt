@@ -1,0 +1,50 @@
+Question 1 : "Build the images for Microservices (remember to edit code for frontend) and push images to
+Dockerhub and write commands to run backend & frontend and they should run fine."
+
+Answer 1 : 
+
+The first command to run the Dockerfile to build, run and tag the frontend image.
+
+Build Command : sudo docker build -t frontend-node .
+Run command : sudo docker run --name frontend -itd frontend-node
+
+
+The following is the link to a public repository hosted on docker hub. I have pushed the frontend-node image to this repository as 
+a requirement of the first question of the assignment 3.
+
+https://hub.docker.com/r/sbinsaleem/devopstraining/tags
+
+Now, first I have used the following commands to build and run the backend without an internal network. In this way,
+the frontend and backend are running on the local host using the "host.docker.internal".
+
+Build Command : sudo docker build -t python-backend .
+Run Command : sudo docker run -it --rm --name backend --init -p 9090:8080 python-backend
+
+After that, I have used the following commands to build and run the frontend. 
+
+Build Command : sudo dockebuild -t frontend-app .
+Run Command : sudo docker run -it --rm --name frontend --init -p 9091:8080 frontend-app
+
+The following output are showing that my frontend and backend run fines.
+
+172.17.0.1 - - [21/Mar/2022 06:13:01] "GET /instructors HTTP/1.1" 200 -
+172.17.0.1 - - [21/Mar/2022 06:13:12] "GET /students HTTP/1.1" 200 -
+
+> node_express_app@1.0.0 start /app
+> node server.js
+
+Running on http://0.0.0.0:8080
+
+Now, I ran the both microservices on a container network "application". In this way, first I created a network "application" then I
+run the backend container. After that, I rebuild the frontend container by providing the name of container / service as url to call
+the backend. The following commands are used for this purpose.
+
+Create Network : sudo docker network create application
+Run the backend container : sudo docker run -it --rm --name backend --network application --init -p 9090:8080 python-backend
+Update the server.js file with "Backend:8080" at the place of url.
+Run the frontend container : sudo docker run -it --rm --name frontend --network application --init -p 909091:8080 frontend-app
+
+Now, the frontend is calling the backend for our python application.
+
+
+

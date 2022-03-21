@@ -1,0 +1,43 @@
+Question 2 : "How to leverage cache using Dockerfiles?"
+
+Answer 2: 
+
+A Docker image consists of read-only layers. In Docker image, each layer represents a Dockerfile instruction. 
+All the layers are stacked and each layer is a delta of the changes from the previous layer. 
+Once a layer is build, the docker can use the layer from the cache next time. However, the execution sequence of the layers
+and depdency of a layer to other layers means that some layers might need to be rexecuted. In other words, cache leverage means
+making layer execution sequence in a way that once a layer is changed the update to that layer or rebuilding or that layer or changes
+should be done to that layer rather than changing all the layers in the Dockerfile or all the layers of a Docker image. 
+
+For example, we have a Dockerfile where we are using "ADD" command (to adding some thing from the remote directory) 
+or "COPY" command (to copy something from the local directory) to add the soruce code in an image as second layer  
+after the base layer. All the other commands are given after this layer. For example "RUN" command. Now, after the 
+execution of this the "RUN" command the second layer (source code copy) also changes because of changes to the source code.
+Therefore, using the cache leverage, we will use the "COPY" command before building the code to avoid any changes to other commands again 
+or rebuilding the code or image  again.  
+ 
+
+The cache leverage helps to reduce the build time significantly. By the way, you can use the "no cache" flag to rebuild the image in case 
+you have new build or image to recreate the build because of an update to the other layers in an image. 
+
+However, I have created the good practice docker file by the following compared to given in the docker-samples directory.
+
+Good Practice Dockerfile.
+***********
+FROM python:3.9-alpine
+
+LABEL name="Python Application" \
+     maintainer="Saad Bin Saleem <sbin.saleem@gmail.com>" \
+     summary="A sample python application"
+
+# Create app directory
+WORKDIR /app
+
+EXPOSE 8080
+
+RUN pip install flask
+
+COPY app.py index.html  ./
+
+CMD [ "python", "./app.py" ]
+************
